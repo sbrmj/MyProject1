@@ -21,6 +21,8 @@ def toss_coin(n):
         chart.add_rows([mean])
         time.sleep(0.05)
 
+    return mean
+
 number_of_trials = st.slider('¿Numero de intentos?',1,1000,10)
 start_button = st.button('Ejecutar')
 
