@@ -4,7 +4,7 @@ import time
 
 st.header('Lanzar una moneda')
 
-chart = st.line_chart([0.5])
+placeholder = st.empty()
 
 def toss_coin(n):
 
@@ -14,8 +14,6 @@ def toss_coin(n):
     list_mean = []
     outcome_no = 0
     outcome_1_count = 0
-
-    placeholder = st.empty()
 
     for r in trial_outcomes:
         outcome_no +=1
