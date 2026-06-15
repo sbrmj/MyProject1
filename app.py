@@ -11,16 +11,21 @@ def toss_coin(n):
     trial_outcomes = scipy.stats.bernoulli.rvs(p=0.5, size=n)
 
     mean = None
+    list_mean = []
     outcome_no = 0
     outcome_1_count = 0
+
+    placeholder = st.empty()
 
     for r in trial_outcomes:
         outcome_no +=1
         if r == 1:
             outcome_1_count += 1
         mean = outcome_1_count / outcome_no
-        chart.add_rows([mean])
+        list_mean.append(mean)
+        placeholder.line_chart(list_mean)
         time.sleep(0.05)
+    
 
     return mean
 
